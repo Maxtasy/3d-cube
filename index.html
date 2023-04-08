@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="base-style.css">
+  <link rel="stylesheet" href="style.scss">
+  <script src="script.js" defer></script>
+  <title>3D Cube</title>
+</head>
+<body>
+  <div class="Scene">
+    <div class="Cube">
+      <div class="Cube__Face Cube__Front">front</div>
+      <div class="Cube__Face Cube__Back">back</div>
+      <div class="Cube__Face Cube__Left">left</div>
+      <div class="Cube__Face Cube__Right">right</div>
+      <div class="Cube__Face Cube__Top">top</div>
+      <div class="Cube__Face Cube__Bottom">bottom</div>
+    </div>
+  </div>
+  <div class="Inputs">
+    <div class="Input">
+      <label for="rotate-x">Rotate X Axis</label>
+      <input
+        id="rotate-x"
+        type="range"
+        min="0"
+        max="360"
+        step="1"
+        value="0"
+        data-axis="x"
+      >
+    </div>
+    <div class="Input">
+      <label for="rotate-y">Rotate Y Axis</label>
+      <input
+        id="rotate-y"
+        type="range"
+        min="0"
+        max="360"
+        step="1"
+        value="0"
+        data-axis="y"
+      >
+    </div>
+    <div class="Input">
+      <label for="rotate-z">Rotate Z Axis</label>
+      <input
+        id="rotate-z"
+        type="range"
+        min="0"
+        max="360"
+        step="1"
+        value="0"
+        data-axis="z"
+      >
+    </div>
+  </div>
+</body>
+</html>

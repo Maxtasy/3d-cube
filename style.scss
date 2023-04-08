@@ -1,0 +1,78 @@
+:root {
+  --side-length: 200px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #0D0D0D;
+  color: #F3F3F3;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.Scene {
+  width: 200px;
+  height: 200px;
+  perspective: 600px;
+}
+
+.Cube {
+  position: relative;
+  width: var(--side-length);
+  height: var(--side-length);
+  transform-style: preserve-3d;
+  transform: var(--transform, translateZ(-100px));
+  transition: transform 100ms;
+
+  &__Face {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    background-color: #962D3E;
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    border: 2px solid #F3F3F3;
+  }
+
+  &__Front {
+    transform: rotateY(0deg) translateZ(100px);
+    
+  }
+
+  &__Back {
+    transform: rotateY(180deg) translateZ(100px);
+  }
+
+  &__Left {
+    transform: rotateY(-90deg) translateZ(100px);
+  }
+  
+  &__Right {
+    transform: rotateY(90deg) translateZ(100px);
+  }
+  
+  &__Top {
+    transform: rotateX(90deg) translateZ(100px);
+  }
+  
+  &__Bottom {
+    transform: rotateX(-90deg) translateZ(100px);
+  }
+}
+
+.Inputs {
+  margin-top: 100px;
+
+  .Input {
+    display: flex;
+    flex-direction: column;
+  }
+}
